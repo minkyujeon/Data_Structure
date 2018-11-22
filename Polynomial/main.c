@@ -15,24 +15,24 @@ int main(void){
 	poly2_head=poly2_tail=newNode2;
 	result_head=result_tail=newNode3;
 
-	printf("다항식 1 입력 : \n");
-	printf("몇 개의 항 ? ");
+	printf("Poly 1 input : \n");
+	printf("number of terms? ");
 	scanf_s("%d",&n1);
 	input(&poly1_head,&poly1_tail,0,0,n1);
 	output_1(poly1_head);
 
-	printf("다항식 2 입력 : \n");
-	printf("몇 개의 항?");
+	printf("Poly 2 input : \n");
+	printf("number of terms?");
 	scanf_s("%d",&n2);
 	input(&poly2_head,&poly2_tail,0,0,n2);
 	output_1(poly2_head);
 
-	printf("덧셈 : ");
+	printf("Addition : ");
 	Poly_Add(poly1_head,poly2_head,&result_head,&result_tail);
 	output_1(result_head);
 	output_2(result_tail);
 
-	printf("뺄셈 : ");
+	printf("Subtraction : ");
 	Poly_Sub(poly1_head,poly2_head,&result_head,&result_tail);
 	output_1(result_head);
 	output_2(result_tail);
